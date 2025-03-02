@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    max-width: 700px;
+    max-width: 500px;
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -26,21 +26,26 @@ label {
 }
 
 input, select {
-    width: 100%;
+    width: 70%;
     padding: 8px;
-    margin: 5px 0 15px;
+    margin: 5px 1px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4a4a4a;
 }
 
 button {
-    width: 100%;
+    width: 30%;
     padding: 10px;
     background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 button:hover {
