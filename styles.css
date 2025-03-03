@@ -1,12 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
 }
 
 .container {
-    max-width: 700px;
+    max-width: 500px;
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -25,22 +25,41 @@ label {
     margin-top: 10px;
 }
 
-input, select {
-    width: 100%;
+input {
+    width: 70%;
     padding: 8px;
-    margin: 5px 0 15px;
+    margin: 5px 1px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4a4a4a;
+}
+
+select {
+    width: 70%;
+    padding: 8px;
+    margin: 5px 1px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4a4a4a;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 button {
-    width: 100%;
+    width: 30%;
     padding: 10px;
     background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 button:hover {
