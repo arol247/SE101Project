@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // 📌 Send Data to Backend (API)
         try {
-            const response = await fetch("http://localhost:3306/saveFormData", { // Ensure this URL matches your backend endpoint
+            const response = await fetch("http://localhost:5000/displayData", { // Ensure this URL matches your backend endpoint
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const result = await response.json();
-            alert(result.success || result.error); // Show success or error message
+            alert(result.message || result.error); // Show success or error message
             form.reset(); // Clear the form
         } catch (error) {
             alert("❌ Error submitting form: " + error.message);
