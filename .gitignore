@@ -1,2 +1,6 @@
-# Ignore environment files
+
+# Ignore .env file (hides database credentials)
 .env
+
+# Ignore VS Code settings folder
+.vscode/
