@@ -61,11 +61,22 @@ button:hover {
 
 /* Login Page Styling */
 .login-form {
-    text-align: center;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px gray;
+    margin: auto;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .login-form input {
     text-align: center;
+    width: 90%;
 }
 
 /* Profile Dashboard Styling */
