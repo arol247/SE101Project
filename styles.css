@@ -1,10 +1,122 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
+/* Global Styles */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #6c49b1;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+
+.logo {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+ul li.active,
+ul li:hover {
+    background-color: #583d99;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
     padding: 20px;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header input {
+    padding: 8px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.welcome-banner {
+    background-color: #9b72cf;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Finance Section */
+.finance-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.finance-box {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 10px;
+}
+
+/* Courses Section */
+.courses-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.course-card {
+    background: #d3b3ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    margin: 10px;
+}
+
+/* Side Panel */
+.side-panel {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Container */
 .container {
     max-width: 500px;
     background: white;
@@ -35,7 +147,7 @@ input, select {
 }
 
 button {
-    width: 100%;
+    width: 30%;
     padding: 10px;
     background-color: #28a745;
     color: white;
@@ -43,7 +155,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     display: block;
-    margin-top: 10px;
+    margin: 10px auto;
+    text-align: center;
 }
 
 button:hover {
