@@ -26,17 +26,16 @@ label {
 }
 
 input, select {
-    width: 90%;
+    width: 93%;
     padding: 8px;
-    margin: 5px 1px;
+    margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #4a4a4a;
+    font-size: 14px;
 }
 
 button {
-    width: 30%;
+    width: 100%;
     padding: 10px;
     background-color: #28a745;
     color: white;
@@ -44,7 +43,6 @@ button {
     border-radius: 5px;
     cursor: pointer;
     display: block;
-    margin: 0 auto;
     margin-top: 10px;
 }
 
@@ -54,11 +52,37 @@ button:hover {
 
 .form-row {
     display: flex;
-    justify-content: space-between;
-    gap: 1px;
+    gap: 10px;
 }
 
 .form-group {
     flex: 1;
-    min-width: 45%;
+}
+
+/* Login Page Styling */
+.login-form {
+    text-align: center;
+}
+
+.login-form input {
+    text-align: center;
+}
+
+/* Profile Dashboard Styling */
+.profile-container {
+    max-width: 800px;
+    padding: 20px;
+    margin: auto;
+}
+
+.profile-container h2 {
+    color: #222;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
 }
