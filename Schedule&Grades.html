@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule & Grades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="class-schedule-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-pic"></div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Profile</a>
+                <a href="#">Class Schedule/Grades</a>
+                <a href="#">Enrollment</a>
+                <a href="#">Change Password</a>
+            </nav>
+            <button class="logout">Logout</button>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <div>
+                    <h2>Name</h2>
+                    <p>Year Level</p>
+                </div>
+                <div class="notification">Bell</div>
+            </header>
+            
+            <section class="dashboard">
+                <div class="tabs">
+                    <button class="tab active" onclick="showTab('schedule')">Class Schedule</button>
+                    <button class="tab" onclick="showTab('grades')">Grades/Remarks</button>
+                    <span class="date">03/25</span>
+                </div>
+                <div class="calendar" id="calendar">
+                    <!-- Calendar Days -->
+                </div>
+            </section>
+        </main>
+        
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="card">
+                <h3>Instructor</h3>
+                <div class="instructors">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Daily Notice</h3>
+                <p>Announcements: Lorem ipsum dolor sit amet...</p>
+                <p>To-do</p>
+            </div>
+        </aside>
+    </div>
+    
+    
+</body>
+</html>

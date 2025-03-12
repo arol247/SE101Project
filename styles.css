@@ -5,6 +5,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
     display: flex;
+    flex-direction: row;
     background-color: #f4f4f4;
 }
 
@@ -210,6 +211,98 @@ button:hover {
     border-bottom: 2px solid #ccc;
     padding-bottom: 5px;
     margin-bottom: 10px;
+}
+
+/* Class Schedule Tab */
+.class-schedule-container {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Tabs Styling */
+.class-schedule-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.class-schedule-tab {
+    padding: 10px 20px;
+    background: #3d3d3d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.class-schedule-tab.active {
+    background: #28a745;
+}
+
+.class-schedule-tab:hover {
+    background: #218838;
+}
+
+/* Calendar Grid */
+.class-schedule-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.class-schedule-calendar div {
+    background: #e0e0e0;
+    padding: 15px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.class-schedule-calendar div:hover {
+    background: #3d3d3d;
+    color: white;
+    cursor: pointer;
+}
+
+/* Instructor & Daily Notice Sections */
+.class-schedule-right-sidebar {
+    width: 250px;
+}
+
+.class-schedule-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.class-schedule-instructors {
+    display: flex;
+    gap: 10px;
+}
+
+.class-schedule-instructor-circle {
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .class-schedule-calendar {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* Responsive Design */
