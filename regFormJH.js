@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // 📌 Collect Form Data
         const formData = {
+            first_name: document.getElementById("first_name").value,
+            last_name: document.getElementById("last_name").value,
             sex: document.getElementById("sex").value,
             civil_status: document.getElementById("civil_status").value,
             nationality: document.getElementById("nationality").value,
