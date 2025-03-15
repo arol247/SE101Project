@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="register-container">
         <h2>Junior High Registration Form</h2>
         <form action="#" method="post">
             <br>
@@ -17,10 +17,10 @@
             <h3>Personal Information</h3>
 
             <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" name="first_name" required>
+            <input type="text" id="first_name" name="first_name" class="input-name" required>
 
             <label for="last_name">Last Name:</label>
-            <input type="text" id="last_name" name="last_name" required>
+            <input type="text" id="last_name" name="last_name" class="input-name" required>
 
             <div class="form-row">
                 <div class="form-group">
@@ -65,62 +65,77 @@
                 </div>
             </div>
 
-            <label for="civil_status">Civil Status:</label>
-            <input type="text" id="civil_status" name="civil_status">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="civil_status">Civil Status:</label>
+                    <select id="civil_status" name="civil_status" class="status">
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                        <option value="widowed">Widowed</option>
+                        <option value="separated">Separated</option>
+                        <option value="divorced">Divorced</option>
+                    </select>
+                </div>
 
-            <label for="birth_date">Birth Date:</label>
-            <input type="date" id="birth_date" name="birth_date"required>
+                <div class="form-group">
+                    <label for="birth_date">Birth Date:</label>
+                    <input type="date" id="birth_date" name="birth_date" class="bday" required>
+                </div>
+            </div>
+
+            
 
             <label for="birth_place">Birth Place:</label>
-            <input type="text" id="birth_place" name="birth_place">
+            <input type="text" id="birth_place" name="birth_place" class="input-name">
 
             <label for="contact_number">Contact Number:</label>
-            <input type="text" id="contact_number" name="contact_number" required>
+            <input type="text" id="contact_number" name="contact_number" class="input-name" required>
+
+            <label for="lrn">LRN:</label>
+            <input type="text" id="lrn" name="lrn" class="input-name">
 
             <hr>
 
             <h3>Guardian Information</h3>
             <label for="father">Father:</label>
-            <input type="text" id="father" name="father" required>
+            <input type="text" id="father" name="father" class="guardian" required>
 
             <label for="father_occupation">Occupation:</label>
-            <input type="text" id="father_occupation" name="father_occupation">
+            <input type="text" id="father_occupation" name="father_occupation" class="guardian">
 
             <label for="mother">Mother:</label>
-            <input type="text" id="mother" name="mother" required>
+            <input type="text" id="mother" name="mother" class="guardian" required>
 
             <label for="mother_occupation">Occupation:</label>
-            <input type="text" id="mother_occupation" name="mother_occupation">
+            <input type="text" id="mother_occupation" name="mother_occupation" class="guardian">
 
             <label for="guardian">Guardian:</label>
-            <input type="text" id="guardian" name="guardian" required>
+            <input type="text" id="guardian" name="guardian" class="guardian" required>
 
             <label for="relationship">Relationship:</label>
-            <input type="text" id="relationship" name="relationship">
+            <input type="text" id="relationship" name="relationship" class="guardian">
 
             <label for="contact_number">Contact Number:</label>
-            <input type="text" id="contact_number" name="contact_number" required>
+            <input type="text" id="contact_number" name="contact_number" class="guardian" required>
 
             <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required>
+            <input type="text" id="address" name="address" class="guardian" required>
 
-            <label for="lrn">LRN:</label>
-            <input type="text" id="lrn" name="lrn">
 
             <hr>
 
             <h3>Education Background</h3>
             <label for="primary">Primary:</label>
-            <input type="text" id="primary" name="primary">
+            <input type="text" id="primary" name="primary" class="eduation-background" required>
 
             <label for="intermediate">Intermediate:</label>
-            <input type="text" id="intermediate" name="intermediate">
+            <input type="text" id="intermediate" name="intermediate" class="eduation-background" required>
 
             <label for="junior_high">Junior High:</label>
-            <input type="text" id="junior_high" name="junior_high">
+            <input type="text" id="junior_high" name="junior_high" class="eduation-background" required>
 
             <label for="SeniorHigh">Senior High:</label>
-            <input type="text" id="senior_high" name="senrior_high">
+            <input type="text" id="senior_high" name="senrior_high" class="eduation-background" required>
 
             <button type="submit">Submit</button>
         </form>
