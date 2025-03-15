@@ -7,49 +7,86 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar">
-        <div>
-            <img src="" alt="Profile">
-            <ul>
-                <li class="active">Home</li>
-                <li>Profile</li>
-                <li>Class Schedule/Grades</li>
-                <li>Enrollment</li>
-                <li>Change Password</li>
-            </ul>
-        </div>
-        <div class="logout"> Logout</div>
-    </div>
-    <div class="main-content">
-        <div class="top-bar">
-            <div>Name<br><small>Year Level</small></div>
-            <div></div>
-        </div>
-        <div class="banner">
-            <div>
-                <small>March 6, 2025</small>
-                <h2>Welcome back, Student!</h2>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-pic"></div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Profile</a>
+                <a href="#">Class Schedule/Grades</a>
+                <a href="#">Enrollment</a>
+                <a href="#">Change Password</a>
+            </nav>
+            <button class="logout">Logout</button>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <p>March 6, 2025</p>
+            </header>
+            <header>
+                <div class="header-left">
+                    <h1>Welcome back, Student!</h1>
+                    <p>Year Level</p>
+                </div>
+                <div class="header-right">
+                    <div class="profile-pic"></div>
+                    <div class="user-info">    
+</div>
+                    <div class="notification">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <section class="dashboard">
+                <div class="finance-section">
+                    <h3>Finance</h3>
+                    <div class="finance-cards">
+                        <div class="finance-card">Total Tuition
+                            <h2>P10,000.00</h2>
+                        </div>
+                        
+                        <div class="finance-card">Paid
+                            <h2>P5,000.00</h2>
+                        </div>
+                        <div class="finance-card">Others
+                            <h2>P2,000.00</h2>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subjects-section">
+                    <h3>Subjects</h3>
+                    <div class="subject-card">Math
+                        <h2>Geometry 1</h2>
+                    </div>
+                    <div class="subject-card">Topic
+                        <h2>Trigonometry</h2>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="card">
+                <h3>Instructor</h3>
+                <div class="instructors">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                <a href="#">See all</a>
             </div>
-            <img src="" alt="Banner Image" width="100">
-        </div>
-        <div class="finance-section">
-            <div class="box">Total Tuition</div>
-            <div class="box">Paid</div>
-            <div class="box">Others</div>
-        </div>
-        <div class="subjects-section">
-            <div class="subject-box" style="background: gray; color: white;">Math</div>
-            <div class="subject-box">
-                <strong>Geometry</strong>
-                <p>Geometry is a branch of mathematics...</p>
+            <div class="card">
+                <h3>Daily notice</h3>
+                <p>Announcements: Lorem ipsum dolor sit amet...</p>
+                <a href="#">See more</a>
             </div>
-        </div>
-        <div class="notice-panel">
-            <strong>Daily Notice</strong> <a href="#">See all</a>
-            <p><strong>Announcements</strong></p>
-            <p>Sorem ipsum dolor sit amet...</p>
-            <a href="#">See more</a>
-        </div>
+        </aside>
     </div>
 </body>
 </html>
