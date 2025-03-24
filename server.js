@@ -35,7 +35,7 @@ connection.connect((err) => {
 // ✅ API Endpoint to Display Form Data and Insert into Database
 app.post('/displayData', (req, res) => {
     const {
-        first_name, last_name, sex, civil_status, nationality, birth_date, birth_place,
+        first_name, middle_name, last_name, sex, civil_status, nationality, birth_date, birth_place,
         contact_number, address, lrn, primary, intermediate,
         father, father_occupation, mother, mother_occupation,
         guardian, relationship
@@ -45,12 +45,12 @@ app.post('/displayData', (req, res) => {
     console.log('Received form data:', req.body);
 
     // Insert data into the students table
-    const studentSql = `INSERT INTO students (first_name, last_name, sex, civil_status, nationality, birth_date, birth_place,
+    const studentSql = `INSERT INTO students (first_name, middle_name, last_name, sex, civil_status, nationality, birth_date, birth_place,
                         contact_number, address, lrn, created_at)
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())`;
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())`;
 
     connection.query(studentSql, [
-        first_name, last_name, sex, civil_status, nationality, birth_date, birth_place,
+        first_name, middle_name, last_name, sex, civil_status, nationality, birth_date, birth_place,
         contact_number, address, lrn
     ], (err, result) => {
         if (err) {
