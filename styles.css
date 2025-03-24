@@ -1,16 +1,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-    margin-bottom: 10;
-    padding: 20px;
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    background-color: #f4f4f4;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 /* Register Page Styling */
@@ -160,8 +152,7 @@ button:hover {
 }
 
 button {
-    width: 100%;
-    height: 10%;
+    width: auto;
     padding: 5px;
     background-color: #2bbab8;
     color: white;
@@ -172,6 +163,7 @@ button {
     margin: 10px auto;
     text-align: center;
     border: 2px solid #333;
+    height: auto;
 }
 
 button:hover {
@@ -263,6 +255,7 @@ button:hover {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    height: auto;
 }
 
 .logout:hover {
@@ -429,6 +422,7 @@ header {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    height: auto;
 }
 
 .logout:hover {
@@ -596,6 +590,7 @@ header {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    height: auto;
 }
 
 .logout:hover {
@@ -757,6 +752,7 @@ button:hover {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    height: auto;
 }
 
 .logout:hover {
@@ -906,6 +902,7 @@ header {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    height: auto;
 }
 
 .logout:hover {
