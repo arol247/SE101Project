@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="regForm.js" defer></script>
+</head>
+<body>
+
+    <div class="register-container">
+        
+        <h2>Admin Registration Form</h2>
+        <form action="#" method="post">
+            <br>
+
+            <h3>Personal Information</h3>
+
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" class="input-name" required>
+
+            <label for="middle_name">Middle Name:</label>
+            <input type="text" id="middle_name" name="middle_name" class="input-name" required>
+
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" class="input-name" required>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="sex">Sex:</label>
+                    <select id="sex" name="sex">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" class="input-name" required>
+        
+
+            
+           
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

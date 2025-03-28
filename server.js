@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mysql = require('mysql2');
+const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -10,11 +11,28 @@ const port = process.env.PORT || 5000;
 app.use(cors()); // Allow frontend to access backend
 app.use(bodyParser.json()); // Parse JSON body
 
-// Debugging: Log environment variables
-console.log('DB_HOST:', process.env.DB_HOST);
-console.log('DB_USER:', process.env.DB_USER);
-console.log('DB_PASS:', process.env.DB_PASS);
-console.log('DB_NAME:', process.env.DB_NAME);
+// Serve static files (like CSS, JS, images)
+app.use(express.static(path.join(__dirname)));
+
+// Serve Junior High Registration Form
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "Registrationpage.html"));
+});
+
+// Serve Guardian Registration Form
+app.get("/guardian", (req, res) => {
+    res.sendFile(path.join(__dirname, "RegistrationforGuardian.html"));
+});
+
+// Serve Faculty Registration Form
+app.get("/faculty", (req, res) => {
+    res.sendFile(path.join(__dirname, "RegistrationforFaculty.html"));
+});
+
+// Serve Admin Registration Form
+app.get("/admin", (req, res) => {
+    res.sendFile(path.join(__dirname, "RegistrationforAdmin.html"));
+});
 
 // ✅ Connect to MySQL Database
 const connection = mysql.createConnection({
@@ -95,4 +113,11 @@ app.post('/displayData', (req, res) => {
 // ✅ Start the Server
 app.listen(port, () => {
     console.log(`🚀 Server running at http://localhost:${port}/`);
+    console.log(`Junior High Registration: http://localhost:${port}/`);
+    console.log(`Guardian Registration: http://localhost:${port}/guardian`);
+    console.log(`Faculty Registration: http://localhost:${port}/faculty`);
+    console.log(`Admin Registration: http://localhost:${port}/admin`);
 });
+
+//error : nakaroon ng conflict yung port 5000 kaya nag error
+//solution : ayusin yung port number sa .env file at sa server.js

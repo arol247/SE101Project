@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // 📌 Collect Form Data
         const formData = {
+
+            // Junior high register 
             first_name: document.getElementById("first_name").value,
             middle_name: document.getElementById("middle_name").value,
             last_name: document.getElementById("last_name").value,
@@ -25,6 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
             lrn: document.getElementById("lrn").value,
             primary: document.getElementById("primary").value,
             intermediate: document.getElementById("intermediate").value
+
+             // admin register 
+             
+
         };
 
         // 📌 Send Data to Backend (API)

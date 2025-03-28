@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="regForm.js" defer></script>
+</head>
+<body>
+
+    <div class="register-container">
+        
+        <h2>Faculty Registration Form</h2>
+        <form action="#" method="post">
+            <br>
+
+            <h3>Personal Information</h3>
+
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" class="input-name" required>
+
+            <label for="middle_name">Middle Name:</label>
+            <input type="text" id="middle_name" name="middle_name" class="input-name" required>
+
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" class="input-name" required>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="sex">Sex:</label>
+                    <select id="sex" name="sex">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="nationality">Nationality:</label>
+                    <select id="nationality">
+                        <option value="american">American</option>
+                        <option value="australian">Australian</option>
+                        <option value="bangladeshi">Bangladeshi</option>
+                        <option value="british">British</option>
+                        <option value="cambodian">Cambodian</option>
+                        <option value="canadian">Canadian</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="filipino">Filipino</option>
+                        <option value="french">French</option>
+                        <option value="german">German</option>
+                        <option value="indian">Indian</option>
+                        <option value="indonesian">Indonesian</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="kazakh">Kazakh</option>
+                        <option value="korean">Korean</option>
+                        <option value="laotian">Laotian</option>
+                        <option value="malaysian">Malaysian</option>
+                        <option value="mongolian">Mongolian</option>
+                        <option value="myanmar">Myanmar</option>
+                        <option value="nepalese">Nepalese</option>
+                        <option value="pakistani">Pakistani</option>
+                        <option value="russian">Russian</option>
+                        <option value="singaporean">Singaporean</option>
+                        <option value="sri_lankan">Sri Lankan</option>
+                        <option value="thai">Thai</option>
+                        <option value="uzbek">Uzbek</option>
+                        <option value="vietnamese">Vietnamese</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="civil_status">Civil Status:</label>
+                    <select id="civil_status" name="civil_status" class="status">
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                        <option value="widowed">Widowed</option>
+                        <option value="separated">Separated</option>
+                        <option value="divorced">Divorced</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="birth_date">Birth Date:</label>
+                    <input type="date" id="birth_date" name="birth_date" class="bday" required>
+                </div>
+            </div>
+
+            
+            <label for="birth_place">Birth Place:</label>
+            <input type="text" id="birth_place" name="birth_place" class="input-name">
+
+            <label for="contact_number">Contact Number:</label>
+            <input type="text" id="contact_number" name="contact_number" class="input-name" required>
+
+            <label for="major">Major:</label>
+            <input type="text" id="major" name="major" class="input-name" required>
+            
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" class="input-name" required>
+        
+           
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
