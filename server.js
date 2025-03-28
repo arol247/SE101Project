@@ -8,30 +8,28 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors()); // Allow frontend to access backend
-app.use(bodyParser.json()); // Parse JSON body
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
 
-// Serve static files (like CSS, JS, images)
-app.use(express.static(path.join(__dirname)));
+// Serve static files (CSS, JS, images) from the "Static" folder
+app.use(express.static(path.join(__dirname, 'Student Management', 'Static')));
 
-// Serve Junior High Registration Form
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "Registrationpage.html"));
+// Serve HTML pages from the "Templates" folder
+app.get('/student', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Student Management', 'Templates', 'Registrationpage.html'));
 });
 
-// Serve Guardian Registration Form
-app.get("/guardian", (req, res) => {
-    res.sendFile(path.join(__dirname, "RegistrationforGuardian.html"));
+app.get('/guardian', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Student Management', 'Templates', 'RegistrationforGuardian.html'));
 });
 
-// Serve Faculty Registration Form
-app.get("/faculty", (req, res) => {
-    res.sendFile(path.join(__dirname, "RegistrationforFaculty.html"));
+app.get('/faculty', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Student Management', 'Templates', 'RegistrationforFaculty.html'));
 });
 
-// Serve Admin Registration Form
-app.get("/admin", (req, res) => {
-    res.sendFile(path.join(__dirname, "RegistrationforAdmin.html"));
+app.get('/admin', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Student Management', 'Templates', 'RegistrationforAdmin.html'));
 });
 
 // ✅ Connect to MySQL Database
@@ -50,7 +48,7 @@ connection.connect((err) => {
     }
 });
 
-// ✅ API Endpoint to Display Form Data and Insert into Database
+// ✅ API Endpoint to Handle Form Submissions
 app.post('/displayData', (req, res) => {
     const {
         first_name, middle_name, last_name, sex, civil_status, nationality, birth_date, birth_place,
@@ -59,10 +57,9 @@ app.post('/displayData', (req, res) => {
         guardian, relationship
     } = req.body;
 
-    // Log the received data to the terminal
     console.log('Received form data:', req.body);
 
-    // Insert data into the students table
+    // Insert data into the database (example logic)
     const studentSql = `INSERT INTO students (first_name, middle_name, last_name, sex, civil_status, nationality, birth_date, birth_place,
                         contact_number, address, lrn, created_at)
                         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())`;
@@ -78,7 +75,6 @@ app.post('/displayData', (req, res) => {
 
         const studentId = result.insertId;
 
-        // Insert data into the education_history table
         const educationSql = `INSERT INTO education_history (student_id, primary_education, intermediate_education)
                               VALUES (?, ?, ?)`;
 
@@ -90,7 +86,6 @@ app.post('/displayData', (req, res) => {
                 return res.status(500).json({ error: 'Database error' });
             }
 
-            // Insert data into the guardians table
             const guardianSql = `INSERT INTO guardians (father_name, father_occupation, mother_name, mother_occupation,
                                 guardian_name, guardian_relationship, student_id)
                                 VALUES (?, ?, ?, ?, ?, ?, ?)`;
@@ -118,6 +113,3 @@ app.listen(port, () => {
     console.log(`Faculty Registration: http://localhost:${port}/faculty`);
     console.log(`Admin Registration: http://localhost:${port}/admin`);
 });
-
-//error : nakaroon ng conflict yung port 5000 kaya nag error
-//solution : ayusin yung port number sa .env file at sa server.js
