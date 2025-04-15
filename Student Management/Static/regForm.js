@@ -53,3 +53,44 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+function toggleFields() {
+    const level = document.getElementById("education_level").value;
+    const juniorFields = document.getElementById("junior-fields");
+    const seniorFields = document.getElementById("senior-fields");
+
+    if (level === "junior") {
+        juniorFields.style.display = "block";
+        seniorFields.style.display = "none";
+    } else if (level === "senior") {
+        juniorFields.style.display = "none";
+        seniorFields.style.display = "block";
+    } else {
+        juniorFields.style.display = "none";
+        seniorFields.style.display = "none";
+    }
+}
+
+// Function to toggle strand categories based on selected strand
+function toggleStrandCategories() {
+    const strand = document.getElementById("strand").value;
+
+    const categories = {
+        STEM: document.getElementById("stem-categories"),
+        TVL: document.getElementById("tvl-categories"),
+        ABM: document.getElementById("abm-categories"),
+        HUMSS: document.getElementById("humss-categories"),
+        GAS: document.getElementById("gas-categories"),
+    };
+
+    // Hide all categories
+    Object.values(categories).forEach((category) => {
+        category.style.display = "none";
+    });
+
+    // Show the selected strand's category
+    if (categories[strand]) {
+        categories[strand].style.display = "block";
+    }
+}
+
