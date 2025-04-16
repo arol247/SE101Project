@@ -10,13 +10,117 @@
 <body>
 
     <div class="register-container">
-        
-        <h2>Junior High Registration Form</h2>
+        <h2>Registration Form</h2>
         <form action="#" method="post">
             <br>
 
-            <h3>Personal Information</h3>
+            <h3>Education Level</h3>
+            <label for="education_level">Select Level:</label>
+            <select id="education_level" name="education_level" onchange="toggleFields()" required>
+                <option value="">-- Select --</option>
+                <option value="junior">Junior High</option>
+                <option value="senior">Senior High</option>
+            </select>
 
+            <div id="junior-grade-level" style="display: none;">
+                <label for="grade_level">Grade Level:</label>
+                <select id="grade_level" name="grade_level" required>
+                    <option value="Grade 7">Grade 7</option>
+                    <option value="Grade 8">Grade 8</option>
+                    <option value="Grade 9">Grade 9</option>
+                    <option value="Grade 10">Grade 10</option>
+                </select>
+            </div>
+
+            <div id="senior-grade-level" style="display: none;">
+                <label for="grade_level">Grade Level:</label>
+                <select id="grade_level" name="grade_level" required>
+                    <option value="Grade 11">Grade 11</option>
+                    <option value="Grade 12">Grade 12</option>
+                </select>
+            </div>
+
+            <label for="school_year">School Year:</label>
+            <input type="text" id="school_year" name="school_year" placeholder="e.g., 2023-2024" required>
+
+
+            <div id="junior-fields" style="display: none;">
+                <h3>Junior High Registration</h3>
+                <label for="lrn">LRN:</label>
+                <input type="text" id="lrn" name="lrn" class="input-name" required>
+
+                <label for="primary">Primary:</label>
+                <input type="text" id="primary" name="primary" class="education-background" required>
+
+                <label for="intermediate">Intermediate:</label>
+                <input type="text" id="intermediate" name="intermediate" class="education-background" required>
+            </div>
+
+            <div id="senior-fields" style="display: none;">
+                <h3>Senior High Registration</h3>
+                <label for="strand">Strand:</label>
+                <select id="strand" name="strand" onchange="toggleStrandCategories()" required>
+                    <option value="">-- Select Strand --</option>
+                    <option value="STEM">STEM</option>
+                    <option value="ABM">ABM</option>
+                    <option value="HUMSS">HUMSS</option>
+                    <option value="TVL">TVL</option>
+                    <option value="GAS">GAS</option>
+                </select>
+
+                <div id="stem-categories" style="display: none;">
+                    <h4>STEM Categories</h4>
+                    <label for="stem_category">Select Category:</label>
+                    <select id="stem_category" name="stem_category">
+                        <option value="engineering">Engineering</option>
+                        <option value="medical">Medical</option>
+                        <option value="technology">Technology</option>
+                    </select>
+                </div>
+
+                <div id="tvl-categories" style="display: none;">
+                    <h4>TVL Categories</h4>
+                    <label for="tvl_category">Select Category:</label>
+                    <select id="tvl_category" name="tvl_category">
+                        <option value="culinary">Culinary</option>
+                        <option value="agriculture">Agriculture</option>
+                        <option value="electronics">Electronics</option>
+                    </select>
+                </div>
+
+                <div id="abm-categories" style="display: none;">
+                    <h4>ABM Categories</h4>
+                    <label for="abm_category">Select Category:</label>
+                    <select id="abm_category" name="abm_category">
+                        <option value="business_management">Business Management</option>
+                        <option value="accounting">Accounting</option>
+                        <option value="entrepreneurship">Entrepreneurship</option>
+                    </select>
+                </div>
+
+                <div id="humss-categories" style="display: none;">
+                    <h4>HUMSS Categories</h4>
+                    <label for="humss_category">Select Category:</label>
+                    <select id="humss_category" name="humss_category">
+                        <option value="social_sciences">Social Sciences</option>
+                        <option value="education">Education</option>
+                        <option value="communication">Communication</option>
+                    </select>
+                </div>
+
+                <div id="gas-categories" style="display: none;">
+                    <h4>GAS Categories</h4>
+                    <label for="gas_category">Select Category:</label>
+                    <select id="gas_category" name="gas_category">
+                        <option value="general_academics">General Academics</option>
+                        <option value="interdisciplinary">Interdisciplinary</option>
+                    </select>
+                </div>
+            </div>
+
+            <hr>
+
+            <h3>Personal Information</h3>
             <label for="first_name">First Name:</label>
             <input type="text" id="first_name" name="first_name" class="input-name" required>
 
@@ -36,41 +140,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="nationality">Nationality:</label>
-                    <select id="nationality">
-                        <option value="american">American</option>
-                        <option value="australian">Australian</option>
-                        <option value="bangladeshi">Bangladeshi</option>
-                        <option value="british">British</option>
-                        <option value="cambodian">Cambodian</option>
-                        <option value="canadian">Canadian</option>
-                        <option value="chinese">Chinese</option>
-                        <option value="filipino">Filipino</option>
-                        <option value="french">French</option>
-                        <option value="german">German</option>
-                        <option value="indian">Indian</option>
-                        <option value="indonesian">Indonesian</option>
-                        <option value="japanese">Japanese</option>
-                        <option value="kazakh">Kazakh</option>
-                        <option value="korean">Korean</option>
-                        <option value="laotian">Laotian</option>
-                        <option value="malaysian">Malaysian</option>
-                        <option value="mongolian">Mongolian</option>
-                        <option value="myanmar">Myanmar</option>
-                        <option value="nepalese">Nepalese</option>
-                        <option value="pakistani">Pakistani</option>
-                        <option value="russian">Russian</option>
-                        <option value="singaporean">Singaporean</option>
-                        <option value="sri_lankan">Sri Lankan</option>
-                        <option value="thai">Thai</option>
-                        <option value="uzbek">Uzbek</option>
-                        <option value="vietnamese">Vietnamese</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
                     <label for="civil_status">Civil Status:</label>
                     <select id="civil_status" name="civil_status" class="status">
                         <option value="single">Single</option>
@@ -80,23 +149,16 @@
                         <option value="divorced">Divorced</option>
                     </select>
                 </div>
-
-                <div class="form-group">
-                    <label for="birth_date">Birth Date:</label>
-                    <input type="date" id="birth_date" name="birth_date" class="bday" required>
-                </div>
             </div>
 
-            
+            <label for="birth_date">Birth Date:</label>
+            <input type="date" id="birth_date" name="birth_date" class="bday" required>
 
             <label for="birth_place">Birth Place:</label>
             <input type="text" id="birth_place" name="birth_place" class="input-name">
 
             <label for="contact_number">Contact Number:</label>
             <input type="text" id="contact_number" name="contact_number" class="input-name" required>
-
-            <label for="lrn">LRN:</label>
-            <input type="text" id="lrn" name="lrn" class="input-name">
 
             <hr>
 
@@ -119,23 +181,11 @@
             <label for="relationship">Relationship:</label>
             <input type="text" id="relationship" name="relationship" class="guardian">
 
-            <label for="contact_number">Contact Number:</label>
-            <input type="text" id="contact_number" name="contact_number" class="guardian" required>
-
             <label for="address">Address:</label>
             <input type="text" id="address" name="address" class="guardian" required>
 
-
             <hr>
 
-            <h3>Education Background</h3>
-            <label for="primary">Primary:</label>
-            <input type="text" id="primary" name="primary" class="eduation-background" required>
-
-            <label for="intermediate">Intermediate:</label>
-            <input type="text" id="intermediate" name="intermediate" class="eduation-background" required>
-
-           
             <button type="submit">Submit</button>
         </form>
     </div>
