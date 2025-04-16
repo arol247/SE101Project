@@ -58,16 +58,24 @@ function toggleFields() {
     const level = document.getElementById("education_level").value;
     const juniorFields = document.getElementById("junior-fields");
     const seniorFields = document.getElementById("senior-fields");
+    const juniorGradeLevel = document.getElementById("junior-grade-level");
+    const seniorGradeLevel = document.getElementById("senior-grade-level");
 
     if (level === "junior") {
         juniorFields.style.display = "block";
         seniorFields.style.display = "none";
+        juniorGradeLevel.style.display = "block";
+        seniorGradeLevel.style.display = "none";
     } else if (level === "senior") {
         juniorFields.style.display = "none";
         seniorFields.style.display = "block";
+        juniorGradeLevel.style.display = "none";
+        seniorGradeLevel.style.display = "block";
     } else {
         juniorFields.style.display = "none";
         seniorFields.style.display = "none";
+        juniorGradeLevel.style.display = "none";
+        seniorGradeLevel.style.display = "none";
     }
 }
 
